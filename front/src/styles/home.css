@@ -1,0 +1,53 @@
+.bg{
+    background: url('../../public/bg.svg') var(--bg-secondary);
+}
+
+main section .content{
+    max-width: 1450px;
+    margin: auto; 
+    text-align: center;
+    padding: 30px 0;
+}
+
+main section h2{
+    /* padding: 20px 0 10px 0; */
+    font-size: 20px;
+    margin: 0px 2% 40px 2%;
+}
+
+main section button{
+    margin-top: 30px;
+}
+
+main section .illustration{
+    width: 100%;
+}
+
+main section .text > div{
+    margin: 80px;
+}
+
+main section .text .catchphrase span:first-child{
+    background: var(--primary);
+    color : white;
+    font-size: 20px;
+    padding: 10px;
+    line-height: 100px;
+    transform: rotate(-90deg);
+}
+
+main section .text .catchphrase span:nth-child(3){
+    color : var(--primary);
+    font-size: 20px;
+    /* margin-top: 100px; */
+    margin-right: 50px;
+}
+
+main section .text .catchphrase span:nth-child(4){
+    background : var(--bg-secondary);
+    color: var(--primary);
+    padding: 10px;
+    font-size: 20px;
+    /* margin-top: 100px; */
+    font-weight: 600;
+}

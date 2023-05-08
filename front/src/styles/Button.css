@@ -1,0 +1,14 @@
+a.button{
+    background:var(--primary);
+    padding: 10px 20px;
+    color: var(--bg-primary);
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+a.button:hover{
+    box-shadow: 4px 4px 0px var(--secondary);
+}

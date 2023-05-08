@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+    --primary : #6d27de;
+    --secondary : #ffc500;
+    --bg-primary : #fff;
+    --bg-secondary : #F4F4F4; 
+    --shadow : #e0e0e0;   
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    height: max-content;
+    
+}
+
+body{
+    margin: 0;
+    min-width: 370px;
+}
+
+.main-content{
+    max-width: 1450px;
+    margin: auto;
+}
+
+main{
+    min-height: 80vh;
+}
+
+h1, h2, h3{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+a[href='/home'] div{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+a[href='/home'] div div{
+    background: var(--secondary);
+    width: 80%;
+    height: 3px;
+}
+
+.logo{
+  font-family: 'Chela One', sans-serif;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.logo::first-letter{
+    background: var(--primary);
+    color: #fff;
+    padding: 0 3px;
+    border-radius: 5px;
+  }

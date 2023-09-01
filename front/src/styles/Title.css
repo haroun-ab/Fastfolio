@@ -1,0 +1,11 @@
+.title{
+    color: var(--primary);
+    display: inline-block;
+    font-weight: 700;
+}
+.title-decoration{
+    width: 35px;
+    height: 3px;
+    margin: 1px 0 0 7px;
+    background: var(--secondary);
+}

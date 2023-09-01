@@ -1,11 +1,22 @@
 import React from 'react';
 import '../styles/Button.css'
 function Button(props) {
-  return (
-    <a className='button' href={props.href}>
-      {props.btnValue}
-    </a>
-  );
+
+  if (props.tagName == 'input'){
+    return (
+    
+      <props.tagName className='button' href={props.href} onClick={props.onClick} type={props.type} value={props.btnValue}/>
+       
+    );
+  } else {
+    return (
+    
+      <props.tagName className='button' href={props.href} onClick={props.onClick} type={props.type}>
+        {props.btnValue}
+      </props.tagName>
+    );
+  }
+
 }
 
 export default Button;

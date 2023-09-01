@@ -12,7 +12,6 @@ header{
   align-items: center;
   max-width: 1450px;
   padding: 0 1%;
-  height: 70px;
 }
 
 header .logo{
@@ -25,22 +24,34 @@ color: var(--bg-primary);
 }
 
 header nav a{
-  padding : 50px 10px;
-}
-
-header nav a.login i{
+  padding : 8px;
+  margin-left: 1vw;
+  font-weight: 500;
   font-size: 16px;
-  padding: 6px 7px 5px 6px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: var(--bg-primary);
   transition: 500ms;
 }
 
-header nav a:hover{
-  background: var(--bg-secondary);
+header nav a.nav-login{
+  border-bottom: 1px solid transparent;
+  color: black;
 }
 
-header nav a:hover > i{
-  box-shadow:  4px 2px 0 var(--secondary);
+header a.nav-signup{
+  background: var(--primary);
+  border-radius: 10px;
+  color: white;
+}
+
+/* header a.nav-signup:hover{
+  background: none;
+  color: var(--primary);
+} */
+
+header nav a.nav-signup:hover{
+  box-shadow:  4px 4px 0 var(--secondary);
+}
+
+header nav a.nav-login:hover{
+  /* border-bottom: 1px solid var(--primary); */
+  color: var(--primary);  
 }

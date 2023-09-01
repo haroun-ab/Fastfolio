@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root{
     --primary : #6d27de;
     --secondary : #ffc500;
     --bg-primary : #fff;
     --bg-secondary : #F4F4F4; 
-    --shadow : #e0e0e0;   
+    --shadow : #e0e0e0; 
+    --grey : #959595;  
 }
 
 *{
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     height: max-content;
-    
+}
+
+*::selection{
+    background: var(--secondary);
+    color: var(--primary);
 }
 
 body{
@@ -35,6 +40,10 @@ h1, h2, h3{
 
 a{
     text-decoration: none;
+}
+
+a, span{
+    display: inline-block;
 }
 
 a[href='/home'] div{

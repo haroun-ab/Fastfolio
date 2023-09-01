@@ -1,6 +1,5 @@
 footer{
     background: black;
-
 }
   
 .footer-content{
@@ -27,6 +26,6 @@ footer{
     footer .copyright{
         color: var(--shadow);
         padding: 10px;
-        font-size: 13px;
-        font-weight: 500;
+        font-size: 14px;
+        /* font-weight: 500; */
     }

@@ -1,6 +1,6 @@
-a.button{
+a.button, button.button, input.button{
     background:var(--primary);
-    padding: 10px 20px;
+    padding: 7px 10px;
     color: var(--bg-primary);
     font-weight: 600;
     border-radius: 10px;
@@ -9,6 +9,8 @@ a.button{
     cursor: pointer;
 }
 
-a.button:hover{
+a.button:hover, button.button:hover, input.button:hover{
     box-shadow: 4px 4px 0px var(--secondary);
+    background: #560fca;
+
 }

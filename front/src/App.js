@@ -1,14 +1,15 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import './styles/index.css';
 import './styles/normalize.css'
-
 import Home from './pages/Home';
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
+          <Route path='/dashboard' element={<Dashboard/>}></Route>{/* accueil de session */}
           <Route path='/portfolio' element={<Home/>}></Route>{/* accueil de session */}
           <Route path='/project' element={<Home/>}></Route>{/* détail et description du projet consulté */}
           <Route path='/new-project' element={<Home/>}></Route>{/* formulaire nouveau projet */}

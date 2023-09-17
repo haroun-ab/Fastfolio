@@ -5,16 +5,19 @@ import  "../styles/Header.css";
 function Header() {
   let loginModal = 0;
   let signupModal = 0;
+
   useEffect(() =>{   
     loginModal = document.querySelector('.backdrop.login-modal')
     signupModal = document.querySelector('.backdrop.signup-modal')
   })
   
   function openLoginModal(){
+    console.log(loginModal);
     loginModal.style.display = "block"
   }
   
   function openSignupModal(){
+    console.log(signupModal);
     signupModal.style.display = "block"
   }
 

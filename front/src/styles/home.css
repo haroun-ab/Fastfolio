@@ -179,47 +179,6 @@ main section .text .catchphrase span:nth-child(4){
     text-decoration: underline var(--secondary) 2px;
 }
 
-.backdrop{
-    display: none;
-    background: rgba(0, 0, 0, 0.552);
-    color: red;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-width: 370px;
-    height: 100%;
-    z-index: 10;
-}
-
-.modal{
-    background: white;
-    padding: 1%;
-    color: black;
-    position: fixed;
-    width: 95%;
-    max-width: 400px;
-    min-width: 370px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 15px;
-}
-
-.modal p{
-    color: var(--grey);
-    text-align: center;
-    width: 80%;
-}
-
-.modal .link{
-    font-weight: 500;
-}
-
-.modal .link:hover{
-    text-decoration: underline;
-}
-
 .flex-center-column{
     display: flex;
     justify-content: center;
@@ -275,20 +234,6 @@ form button{
 .password-info:hover span{
     display: block;
 }
-
-.close-modal-btn{
-    font-size: 40px;
-    transition: 500ms;
-    cursor: pointer;
-    padding: 5px;
-    display: block;
-    border-radius: 10px;
-}
-
-.close-modal-btn:hover{
-    background: var(--bg-secondary);
-}
-
 
 @media (min-width : 768px){
     .middle .content{

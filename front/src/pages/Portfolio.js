@@ -4,7 +4,6 @@ import Modal from "../components/Modal";
 import Title from "../components/Title";
 import Button from "../components/Button";
 import {json, useNavigate, useParams} from 'react-router-dom'
-import Cookies from 'js-cookie'
 import {FaQuoteLeft, FaThumbsUp, FaCheckDouble, FaEnvelope, FaPhoneAlt} from "react-icons/fa"
 import '../styles/pages/portfolio.css'
 import Header from "../components/Header";

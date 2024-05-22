@@ -4,7 +4,6 @@ import Modal from "../components/Modal";
 import Title from "../components/Title";
 import Button from "../components/Button";
 import {useNavigate} from 'react-router-dom'
-import Cookies from 'js-cookie'
 import '../styles/pages/statistics.css'
 import Header from "../components/Header";
 import Stat from "../components/Stat";

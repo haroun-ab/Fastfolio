@@ -4,7 +4,6 @@ import Modal from "../components/Modal";
 import Title from "../components/Title";
 import Button from "../components/Button";
 import {json, useNavigate} from 'react-router-dom'
-import Cookies from 'js-cookie'
 import '../styles/pages/settings.css'
 import Header from "../components/Header";
 import { FaMoon, FaSun } from "react-icons/fa";

@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, {useEffect, useRef} from "react";
 import Title from "../components/Title";
 import Button from "../components/Button";
 import '../styles/pages/settings.css'
@@ -9,7 +9,7 @@ import AccountDelete from "../components/AccountDelete";
 import {setTheme, getBackground} from "../common";
 
 function Settings () {
-    
+
     let changePwdModal = useRef(null);
     let accountDeleteModal = useRef(null);
     useEffect(() => {

@@ -9,7 +9,7 @@ import AccountDelete from "../components/AccountDelete";
 import {setTheme, getBackground} from "../common";
 
 function Settings () {
-    const [settings, setSettings] = useState(null);
+    
     let changePwdModal = useRef(null);
     let accountDeleteModal = useRef(null);
     useEffect(() => {
@@ -36,7 +36,6 @@ function Settings () {
         },
         })
         const contentResponse = await response.json();
-        setSettings(contentResponse);
         const onlineInput = document.querySelector('.setting:first-child input');
         onlineInput.checked = contentResponse["isOnline"];
 

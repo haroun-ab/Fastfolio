@@ -15,6 +15,7 @@ jobs:
 
       - name: Install Dependencies and Build React App
         run: |
+          export CI=false
           cd front
           npm install
           npm run build

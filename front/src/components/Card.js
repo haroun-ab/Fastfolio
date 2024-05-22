@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/components/Card.css'
-import { FaInfoCircle } from 'react-icons/fa';
 import Project from '../pages/Project';
 
 function Card(props) {

@@ -3,7 +3,6 @@ import Modal from "./Modal";
 import Title from "./Title";
 import Button from "./Button";
 import FormField from "./FormField";
-import { FaCheck } from "react-icons/fa";
 
 function Share(props) {
     function closeModal(event){

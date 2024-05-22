@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Modal from "./Modal";
 import FormField from "./FormField";
 import Button from "./Button";
 import Title from "./Title";
 import { useNavigate } from "react-router-dom";
 
-function AccountDelete(props) {
+function AccountDelete() {
 
 
     const navigate = useNavigate();

@@ -1,9 +1,5 @@
 import React, {useEffect, useState} from "react";
-import FormField from "../components/FormField";
-import Modal from "../components/Modal";
 import Title from "../components/Title";
-import Button from "../components/Button";
-import {useNavigate} from 'react-router-dom'
 import '../styles/pages/statistics.css'
 import Header from "../components/Header";
 import Stat from "../components/Stat";

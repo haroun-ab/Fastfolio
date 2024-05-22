@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import '../styles/components/Modal.css'
 import FormField from "./FormField";
 import { FaCamera } from "react-icons/fa";

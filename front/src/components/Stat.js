@@ -1,4 +1,4 @@
-import React, { } from 'react';
+import React from 'react';
 import {FaThumbsUp, FaUserTie, FaEye} from "react-icons/fa"
 
 function Stat(props) {

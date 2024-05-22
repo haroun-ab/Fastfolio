@@ -1,6 +1,5 @@
 import React, { } from 'react';
 import '../styles/components/Skill.css'
-import { FaInfoCircle, FaStar } from 'react-icons/fa';
 import Rating from './ShowRate';
 
 

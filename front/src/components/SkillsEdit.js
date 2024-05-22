@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import '../styles/components/Modal.css'
 import FormField from "./FormField";
-import { FaCamera, FaPen, FaStar, FaTrash } from "react-icons/fa";
+import { FaPen, FaTrash } from "react-icons/fa";
 import Button from "./Button";
 import Title from "./Title";
 import Modal from "./Modal";

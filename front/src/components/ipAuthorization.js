@@ -2,7 +2,6 @@ import React,{useEffect  }  from "react";
 import Title from "./Title";
 import "../styles/components/IpAuthorization.css";
 import Modal from "./Modal";
-import FormField from "./FormField";
 import Button from "./Button";
 
 function IpAuthorization() {

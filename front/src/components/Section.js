@@ -1,7 +1,5 @@
 import React, { useEffect }  from "react";
 import {FaEye,FaEdit, FaCogs, FaChartPie} from 'react-icons/fa'
-
-import Button from "../components/Button";
 import  "../styles/components/Header.css";
 
 function Section(props) { 

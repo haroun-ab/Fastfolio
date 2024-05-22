@@ -1,6 +1,6 @@
 import React, { } from 'react';
 import '../styles/components/Skill.css'
-import { FaInfoCircle, FaStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 
 function ShowRate(props) {
     // logique permettant qu'en fonction du props.rate, on affiche le nombre d'étoiles correspondants

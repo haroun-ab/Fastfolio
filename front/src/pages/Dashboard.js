@@ -1,11 +1,6 @@
 import React, {useEffect} from "react";
-import { useParams } from "react-router-dom";
-
-import FormField from "../components/FormField";
-import Modal from "../components/Modal";
 import Title from "../components/Title";
 import Header from "../components/Header";
-import Button from "../components/Button";// import Cookies from "js-cookie";
 import "../styles/pages/dashboard.css";
 import Section from "../components/Section";
 import {setTheme, getBackground} from "../common";

@@ -1,0 +1,266 @@
+#portfolio section{
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px var(--shadow);
+    padding: 5vh;
+}
+
+#portfolio #presentation{
+    background: var(--bg-primary);
+    width: 100%;
+    padding: 2.5% 4%;
+    position: relative;
+}
+
+#portfolio #projects-skills{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2%
+}
+
+#portfolio #projects{
+    background: var(--bg-primary);
+    width: 72%;
+}
+
+#portfolio .skills-contact{
+    width: 27%;
+}
+
+#portfolio .skills-contact > section{
+    background: var(--primary);
+    min-width: 250px;
+    margin-left: 10px;
+    width: 100%;
+    margin-bottom: 1.5vw;
+}
+
+#portfolio .skills-contact h2{
+    color: var(--white-to-primary);
+}
+
+#portfolio .contact-container {
+    margin-top: 30px;
+}
+
+#portfolio .contact-container div{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+#portfolio .contact-container svg{
+    color: var(--secondary);
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#portfolio .contact-container span{
+    color: var(--bg-primary);
+    font-weight: 500;
+}
+
+#portfolio #projects h2{
+    color: var(--primary)
+}
+
+#portfolio .profile-picture{
+    background: black;
+    width: 10vw;
+    height: 10vw;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 170px;
+    max-height: 170px ;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 3px solid var(--secondary);
+    display: flex;
+}
+
+#portfolio .portfolio-title{
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#portfolio .portfolio-title p{
+   margin: 20px 0 5px 0;
+}
+
+
+
+#portfolio .biography{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    color: var(--text-primary);
+}  
+
+#portfolio .biography svg{
+    color: var(--primary);
+    margin-right: 10px;
+    width: 35px;
+}  
+
+#portfolio .skills-list {
+    margin-top: 30px;
+} 
+
+#portfolio .projects-list{
+    margin-top : 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
+
+#portfolio .card{
+    min-width: 200px;
+}
+
+/*Like*/
+
+
+/*Switch checkbox*/
+
+.like {
+	position: absolute;
+    top: 1px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+}
+
+input[type="checkbox"] {
+	width: 30px;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    margin: 0;
+    display: none;
+}
+
+.like label svg {
+    color : var(--shadow);
+  transition: 500ms;
+  cursor: pointer;
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+}
+
+input:checked + label svg {
+	color : var(--primary);
+  transform: scale(1.20) rotate(360deg);
+  
+}
+  
+input:checked:hover + label svg {
+  transform: scale(1.20) rotate(360deg);
+}
+
+input:hover + label svg {
+    transform: scale(1.20) rotate(0deg);
+}
+
+.like-number{
+    position: relative;
+    left:35px;
+    font-size: 22px;
+}
+
+.img-thumbs{
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.open-authorization{
+    background-color: var(--secondary) !important;
+    box-shadow: 0px 0px 5px var(--shadow);
+    position: fixed;
+    width: 60px;
+    height: 62px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 25px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.open-authorization:hover{
+    transition: 500ms;
+    box-shadow: 10px 10px 0px var(--black);
+
+}
+
+@media(max-width : 768px){
+    #portfolio section{
+        padding: 10% 7%;
+        margin: 0 -2%;
+        width: 104% !important;
+    }
+    #portfolio #presentation{
+        padding-bottom: 100px;
+        border-radius: 50px 50px 0 0;
+    }
+    #portfolio #projects-skills{
+        flex-direction: column-reverse;
+        margin-top: 0;
+        z-index: 1;
+    }
+    #portfolio #projects{
+        background: none;
+        box-shadow: none;
+    }
+
+    #portfolio .skills-contact{
+        width: 100%;
+        margin-top: -65px;
+        margin-left: -2%;
+
+    }
+
+    #portfolio .skills-contact > section:first-child{
+        border-bottom: 5px solid var(--bg-primary);
+    }
+    
+    #portfolio .skills-contact > section{
+        background: var(--primary);
+        margin-left: 10px;
+        width: 100%;
+        margin-bottom: 0;
+        border-radius: 0;
+        margin-left: 0;
+        padding : 5% !important;
+    }
+
+    /* #portfolio .skills-contact > section{
+        margin-top: -65px;
+        border-radius: 0;
+        margin-left: -2%;
+    } */
+    #portfolio .biography{
+        font-size: 18px;
+    }  
+    #portfolio .biography svg{
+        width: 30px;
+    }  
+    #portfolio .skills-list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    } 
+}
+
+

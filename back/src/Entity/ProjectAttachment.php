@@ -14,14 +14,14 @@ class ProjectAttachment
     private ?int $id = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Project $project_id = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $title = null;
+    #[ORM\JoinColumn(nullable: false,  onDelete: "CASCADE")]
+    private ?Project $project = null;
 
     #[ORM\Column(length: 255)]
     private ?string $url = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $title = null;
 
     public function getId(): ?int
     {
@@ -30,25 +30,12 @@ class ProjectAttachment
 
     public function getProjectId(): ?Project
     {
-        return $this->project_id;
+        return $this->project;
     }
 
-    public function setProjectId(?Project $project_id): static
+    public function setProjectId(?Project $project): static
     {
-        $this->project_id = $project_id;
-
-        return $this;
-    }
-
-    public function getTitle(): ?string
-    {
-        return $this->title;
-    }
-
-    public function setTitle(string $title): static
-    {
-        $this->title = $title;
-
+        $this->project = $project;
         return $this;
     }
 
@@ -60,6 +47,17 @@ class ProjectAttachment
     public function setUrl(string $url): static
     {
         $this->url = $url;
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): static
+    {
+        $this->title = $title;
 
         return $this;
     }

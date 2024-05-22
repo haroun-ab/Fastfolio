@@ -15,8 +15,8 @@ class Project
     private ?int $id = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?User $user_id = null;
+    #[ORM\JoinColumn(nullable: false,  onDelete: "CASCADE")]
+    private ?User $user = null;
 
     #[ORM\Column(length: 255)]
     private ?string $title = null;
@@ -34,12 +34,12 @@ class Project
 
     public function getUserId(): ?User
     {
-        return $this->user_id;
+        return $this->user;
     }
 
-    public function setUserId(?User $user_id): static
+    public function setUserId(?User $user): static
     {
-        $this->user_id = $user_id;
+        $this->user = $user;
 
         return $this;
     }

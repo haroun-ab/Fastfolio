@@ -1,0 +1,86 @@
+.welcome{
+    margin: 20px auto;
+    text-align: center;
+}
+.title-user-firstname{
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--text-primary)
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 2%;
+}
+
+.sections{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.section-dashboard{
+    background: var(--bg-primary);
+    width: 46%;
+    height: 85px;
+    margin: 4% 2%;
+    border-radius: 50px;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 5px var(--shadow);
+    transition : 500ms;
+    cursor: pointer;
+    position : relative;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+a.section-dashboard{
+    color: var(--text-primary);
+}
+
+.section-dashboard svg{
+    color: var(--primary);
+    position : relative;
+    left : 15px;
+    width: 120px;
+    transform: rotate(-9deg);
+    transition: 500ms;
+}
+
+.section-dashboard:hover{
+    transform: scale(1.03);
+    background: var(--primary);
+    color: var(--bg-primary);
+}
+
+.section-dashboard:hover svg{
+    color: var(--secondary);
+    transform: rotate(-15deg);
+}
+
+@media (max-width: 768px){
+    .main-content{
+        justify-content: start;
+        padding-top: 80px;
+    }
+    .sections{
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    .section-dashboard{
+        width: 95%;
+        height: 70px;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    .section-dashboard svg{
+        height: 80px;
+        left: -10px;
+    }
+}

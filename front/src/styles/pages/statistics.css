@@ -1,0 +1,56 @@
+#statistics .title{
+    margin: auto;
+    width: fit-content;
+}
+
+#statistics h3{
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+#statistics section{
+    margin: 10px;
+}
+
+.stats-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stat{
+    background: var(--bg-primary);
+    width: 30%;
+    margin: 1.667%;
+    height: 150px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px var(--shadow);
+    font-size: 10vw;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+
+.stat svg{
+    width: 90%;
+    transform: rotate(-9deg);
+    color: var(--primary);
+}
+
+.stat > div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat > div span{
+   font-size: 16px;
+   font-weight: 600;
+   text-align: center;
+   color: var(--text-primary);
+}
+
+.stat > div span:last-child{
+    font-size: 30px;
+ }

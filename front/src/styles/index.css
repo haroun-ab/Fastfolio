@@ -4,9 +4,14 @@
     --primary : #6d27de;
     --secondary : #ffc500;
     --bg-primary : #fff;
-    --bg-secondary : #F4F4F4; 
-    --shadow : #e0e0e0; 
+    --bg-secondary : #f7f7f7; 
+    --shadow : #d4d4d4;
     --grey : #959595;  
+    --text-primary : black;
+    --border : #d4d4d4;
+    --secondary-to-primary : #ffc500;
+    --white-to-primary : white;
+    --empty-stars : lightgrey;
 }
 
 *{
@@ -27,7 +32,9 @@ body{
 
 .main-content{
     max-width: 1450px;
+    min-height: 80vh;
     margin: auto;
+    padding: 70px 2%;
 }
 
 main{
@@ -66,7 +73,20 @@ a[href='/home'] div div{
 
 .logo::first-letter{
     background: var(--primary);
-    color: #fff;
+    color: var(--bg-primary);
     padding: 0 3px;
     border-radius: 5px;
   }
+
+  .user-bg { 
+    background-color: var(--bg-secondary) !important;
+    min-height: calc(100vh - 76px);
+  }
+
+  .form-control{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 9px auto;
+}

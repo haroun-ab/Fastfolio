@@ -1,0 +1,18 @@
+#portfolio .social-media{
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#portfolio .social-media a{
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 25px;
+    transition: 500ms;
+    padding: 0 12px;
+}
+
+#portfolio .social-media a:hover{
+    transform: rotateY(360deg);
+    color: var(--primary);
+}

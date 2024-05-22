@@ -1,0 +1,41 @@
+services:
+  apache:
+    build:
+      context: .
+      dockerfile: ./apache/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - php
+      - mysql
+
+
+  mysql:
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: fastfolio
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Haroun.11
+    ports:
+      - "3306:3306"
+
+  php:
+    build:
+      context: .
+      dockerfile: ./php/Dockerfile
+    volumes:
+      - ./symfony:/var/www/html
+    depends_on:
+      - mysql
+
+  react:
+    build:
+      context: .
+      dockerfile: ./react/Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - php

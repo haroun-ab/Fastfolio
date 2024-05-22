@@ -1,0 +1,26 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies and Build React App
+        run: |
+          cd front
+          npm install
+          npm run build
+
+      - name: Test Symfony App
+        run: |
+          cd back
+          composer install
+          ./bin/phpunit

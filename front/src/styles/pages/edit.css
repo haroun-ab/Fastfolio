@@ -1,0 +1,259 @@
+#edit{
+    justify-content: start !important;
+}
+
+#edit .title{
+    margin: 0 auto !important;
+    width: fit-content;
+}
+
+#edit h3{
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 40px;
+    text-align: center;
+}
+
+.edit-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.margin-auto{
+    margin: auto;
+    padding-top: 200px;
+}
+
+.edit-navbar-list{
+    background: var(--bg-primary);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 3px var(--shadow);
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.edit-navbar-form{
+    border-right: 3px solid var(--bg-secondary);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 15px;   
+    cursor: pointer;
+    transition: 300ms;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.edit-navbar-form:hover,
+.edit-navbar-form.selected{
+    background: var(--primary);
+    border-right: var(--primary);
+    color: var(--secondary-to-primary);
+}
+
+
+
+.edit-navbar-form:last-child{
+    border-inline: transparent;
+}
+
+.edit-form-container{
+    background-color: var(--bg-primary);
+    box-shadow: 0 0 3px var(--shadow);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 30px;
+}
+
+#reset-password{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#reset-password .form-control{
+    margin: 9px 0 ;
+}
+
+.edit-form-container h3{ 
+    margin: 0 0 20px 0!important;
+}
+
+.edit-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.edit-element-container {
+    background: var(--bg-secondary);
+    box-shadow: 0 0 5px var(--shadow);
+    border-radius: 15px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1.5%;
+    color: var(--text-primary);
+}
+
+.edit-element-container.skill {
+    flex-direction: column;
+}
+
+.edit-element-container.skill .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.edit-element-container.skill .bottom{
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.edit-element-container > span {
+    margin: 5px 0;
+    display: flex;
+    width: 100%;
+    color: var(--text-primary);
+}
+
+.edit-button {
+    margin: 5px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 13px
+}
+
+.edit-button button {
+    margin-left: 5px;
+}
+
+.edit-button button:first-child{
+    color: var(--secondary-to-primary);
+}
+
+.edit-button button:last-child{
+    background-color: var(--grey);
+}
+
+.skill-rate {
+    display: flex;
+    align-items: center;
+} 
+
+.skill-rate svg{
+    color: #ffc500;
+    margin-right: 3px;
+    width: 18px;
+} 
+
+.edit-form-container > button{
+    margin-top: 15px;
+}
+
+.edit-modal .modal,
+.attachment-modal .modal{
+    max-width: 600px ;
+    padding: 20px;
+}
+
+.edit-form-container .form-control{
+    margin: 15px auto;
+}
+
+.edit-modal .title,
+.attachment-modal .title{
+    width: fit-content !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}
+
+.edit-modal p,
+.attachment-modal p{
+    width: 100% !important;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.edit-modal p.error,
+.attachment-modal p.error{
+    text-align: left;
+}
+
+
+
+.edit-modal .wrap,
+.attachment-modal .wrap{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.modal-button{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 7%;
+}
+
+form #skill-name{
+    width: 100%;
+}
+
+.modal-button button{
+    margin: 0 3%;
+    width: 40%;
+    border: 2px solid var(--primary);
+}
+
+.modal-button button:first-child{
+    background: var(--grey);
+    border: 2px solid var(--grey);
+    color: var(--bg-secondary);
+}
+
+.attachments{
+    width: 80%;
+    margin: 10px auto 30px auto;
+}
+
+.attachments  > .button{
+    background: none;
+    color: var(--primary);
+}
+
+.attachments  > .button:hover{
+    box-shadow: none;
+    background: none;
+    transform: translateX(7px) scale(1.01);
+}
+
+
+@media (max-width : 768px){
+    .edit-navbar-form{
+        font-size: 14px;   
+    }
+    .edit-navbar-form:last-child{
+        width: 140%;
+    }
+}

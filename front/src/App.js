@@ -1,25 +1,34 @@
+import React from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import './styles/index.css';
-import './styles/normalize.css'
 import Home from './pages/Home';
 import Dashboard from "./pages/Dashboard";
+import Edit from "./pages/Edit";
+import Settings from "./pages/Settings";
+import Statistics from "./pages/Statistics";
+import Portfolio from "./pages/Portfolio";
+import './styles/index.css';
+import './styles/normalize.css'
+import {  } from "./common";
+import ErrorPage from "./pages/Error";
+import ResetPassword from "./pages/ResetPassword";
 
-function App() {
+function App() {  
+
+  
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/dashboard' element={<Dashboard/>}></Route>{/* accueil de session */}
-          <Route path='/portfolio' element={<Home/>}></Route>{/* accueil de session */}
-          <Route path='/project' element={<Home/>}></Route>{/* détail et description du projet consulté */}
-          <Route path='/new-project' element={<Home/>}></Route>{/* formulaire nouveau projet */}
-          <Route path='/edit-project' element={<Home/>}></Route>{/* formulaire édition de projet existant */} 
-          <Route path='/edit-profile' element={<Home/>}></Route>{/* formulaire modification profil */}
-          <Route path='/edit-skills' element={<Home/>}></Route>{/* formulaire modification compétences */}
-          <Route path='/change-password' element={<Home/>}></Route>{/* formulaire modification du mot de passe */}
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/edit' element={<Edit/>}></Route>
+        <Route path='/portfolio/:id' element={<Portfolio/>}></Route>
+        <Route path='/portfolio' element={<Portfolio/>}></Route>
+        <Route path='/settings' element={<Settings/>}></Route>
+        <Route path='/statistics' element={<Statistics/>}></Route>
+        <Route path='*' element={<ErrorPage/>}></Route>
+        <Route path='/reset-password/:token' element={<ResetPassword/>}></Route> 
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;

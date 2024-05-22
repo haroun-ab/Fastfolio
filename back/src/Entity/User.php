@@ -53,6 +53,21 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(nullable: true)]
     private ?bool $online = null;
 
+    #[ORM\Column(nullable: true)]
+    private $theme = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $token = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $token_expires_at = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $is_token_used = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Phone = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -215,6 +230,66 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsOnline(?bool $online): static
     {
         $this->online = $online;
+        return $this;
+    }
+
+    public function getTheme(): ?bool
+    {
+        return $this->theme;
+    }
+
+    public function setTheme($theme): static
+    {
+        $this->theme = $theme;
+
+        return $this;
+    }
+
+    public function getToken(): ?string
+    {
+        return $this->token;
+    }
+
+    public function setToken(?string $token): static
+    {
+        $this->token = $token;
+
+        return $this;
+    }
+
+    public function getTokenExpiresAt(): ?\DateTimeImmutable
+    {
+        return $this->token_expires_at;
+    }
+
+    public function setTokenExpiresAt(?\DateTimeImmutable $token_expires_at): static
+    {
+        $this->token_expires_at = $token_expires_at;
+
+        return $this;
+    }
+
+    public function isIsTokenUsed(): ?bool
+    {
+        return $this->is_token_used;
+    }
+
+    public function setIsTokenUsed(?bool $is_token_used): static
+    {
+        $this->is_token_used = $is_token_used;
+
+        return $this;
+    }
+
+    public function getPhone(): ?string
+    {
+        return $this->Phone;
+    }
+
+    public function setPhone(string $Phone): static
+    {
+        $this->Phone = $Phone;
+
         return $this;
     }
 }

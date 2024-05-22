@@ -1,15 +1,13 @@
 import React, { useEffect }  from "react";
-import '../styles/home.css'
-import "../styles/Modal.css";
+import '../styles/pages/home.css'
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
-
 import {FaBolt, FaLightbulb, FaDollarSign} from 'react-icons/fa'
-import Login from "./Login";
-import Signup from "./Signup";
-function App() {
 
+
+
+function Home() {
   ////////////////////////////////////////////////////////////////////////
  // Apparition et disparition des modals de connexion et d'inscription //
 ////////////////////////////////////////////////////////////////////////
@@ -17,8 +15,9 @@ let loginModal = "";
 let signupModal = "";
 
 useEffect(() =>{   
-loginModal = document.querySelector('.backdrop.login-modal');
-signupModal = document.querySelector('.backdrop.signup-modal');
+    localStorage.removeItem('theme')
+    loginModal = document.querySelector('.backdrop.login-modal');
+    signupModal = document.querySelector('.backdrop.signup-modal');
 })
 
 function openLoginModal(){
@@ -72,9 +71,9 @@ function animSettings(element) {
    
 
     return (
-    <div>
+    <React.Fragment>
         <Header/>
-        <main>
+        <main id="home">
             <section className="bg">
                 <div className="content">
                     <h2>Sign up and create your porfolio for free in less than 10 minutes&nbsp;!</h2>
@@ -93,11 +92,11 @@ function animSettings(element) {
                         <div className="login-signup">
                             <div className="login">
                                 <span>If you have an account,</span>
-                                <Button tagName="a" btnValue="Login" href="/login" onClick={openLoginModal}></Button>
+                                <Button tagName="button" btnValue="Login" onClick={openLoginModal}></Button>
                             </div>
                             <div className="signup">
                                 <span>else,</span>
-                                <Button tagName="a" btnValue="Sign up" href="#" onClick={openSignupModal}></Button>
+                                <Button tagName="button" btnValue="Sign up" href="#" onClick={openSignupModal}></Button>
                             </div>
                         </div>
                     </div>
@@ -128,16 +127,14 @@ function animSettings(element) {
             <section className="bg">
                 <div className="content">
                     <h2>Do you have any suggestions for us to improve our services&nbsp;?</h2>
-                    <Button tagName="a" btnValue="Contact us"/>
+                    <Button tagName="a" href="mailto:fastfolio.service@gmail.com" btnValue="Contact us"/>
                 </div>
             </section>
         </main>
         <Footer/>
-        <Login/>
-        <Signup/>
-    </div>
+    </React.Fragment>
     );
   }
   
-  export default App;
+  export default Home;
   

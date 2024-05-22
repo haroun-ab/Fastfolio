@@ -1,9 +1,5 @@
 controllers:
   resource: ../src/Controller/
   type: attribute
-api_login:
+api_login_check:
   path: /api/login
-  controller: App\Controller\AuthController::login
-  methods: ["POST"]
-# api_login_check:
-#   path: /api/login

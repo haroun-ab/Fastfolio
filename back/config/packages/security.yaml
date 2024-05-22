@@ -9,25 +9,21 @@ security:
         class: App\Entity\User
         property: email
   firewalls:
-    dev:
-      pattern: ^/(_(profiler|wdt)|css|images|js)/
-      security: false
+    login:
+      pattern: ^/api/login
+      stateless: true
+      provider: app_user_provider
+      json_login:
+        check_path: /api/login # or api_login_check as defined in config/routes.yaml
+        username_path: email
+        password_path: password
+        success_handler: lexik_jwt_authentication.handler.authentication_success
+        failure_handler: lexik_jwt_authentication.handler.authentication_failure
 
-    # login:
-    #   pattern: ^/api/login
-    #   stateless: true
-    #   provider: app_user_provider
-    #   json_login:
-    #     check_path: /api/login # or api_login_check as defined in config/routes.yaml
-    #     username_path: email
-    #     password_path: password
-    #     success_handler: lexik_jwt_authentication.handler.authentication_success
-    #     failure_handler: lexik_jwt_authentication.handler.authentication_failure
-
-    # api:
-    #   pattern: ^/api
-    #   stateless: true
-    #   jwt: ~
+    api:
+      pattern: ^/api
+      stateless: true
+      jwt: ~
 
     # activate different ways to authenticate
     # https://symfony.com/doc/current/security.html#the-firewall
@@ -39,6 +35,15 @@ security:
   # Note: Only the *first* access control that matches will be used
   access_control:
     - { path: ^/api/login, roles: PUBLIC_ACCESS }
+    - { path: ^/api/signup, roles: PUBLIC_ACCESS }
+    - { path: ^/api/get-public-portfolio, roles: PUBLIC_ACCESS }
+    - { path: ^/api/set-view, roles: PUBLIC_ACCESS }
+    - { path: ^/api/send-reset-email, roles: PUBLIC_ACCESS }
+    - { path: ^/api/reset-password, roles: PUBLIC_ACCESS }
+    - { path: ^/api/is-reset-token-valid, roles: PUBLIC_ACCESS }
+    - { path: ^/api/set-like, roles: PUBLIC_ACCESS }
+    - { path: ^/api/get-statistics, roles: PUBLIC_ACCESS }
+
     - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
 
 when@test:

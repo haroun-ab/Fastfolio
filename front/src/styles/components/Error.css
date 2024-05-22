@@ -1,0 +1,65 @@
+.error-page {
+    text-align: center;
+}
+
+.error-page .title{
+    font-size: 10vw;
+}
+
+.error-page .title-decoration{
+    display: none;
+}
+
+.error-page p{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.error-page a{
+    padding: 2px 5px;
+    font-weight: 600;    
+    color:  var(--primary);
+    text-decoration: underline;
+    transition: 500ms;
+}
+
+.error-page a:hover{
+    background: var(--secondary);
+    padding: 2px 5px;
+    color:  var(--primary);
+}
+
+.error-page .error-msg{
+    margin-bottom: 75px;
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.error-page p{
+    color: var(--text-primary);
+}
+
+.user-bg.error{
+    background: url('../../../public/backgrounds/wiggle.svg');
+}
+
+.user-bg.error .error-page{
+    padding-top: 150px;
+}
+
+@media (max-width : 1024px){
+    .error-page .title{
+        font-size: 12vw;
+    }
+
+    .error-page .error-msg{
+        font-size: 5vw;
+    }
+
+    .error-page p{
+        font-size: 16px;
+    }
+    
+}

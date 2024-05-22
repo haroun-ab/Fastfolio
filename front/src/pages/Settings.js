@@ -13,17 +13,17 @@ function Settings () {
     let changePwdModal = useRef(null);
     let accountDeleteModal = useRef(null);
     useEffect(() => {
-        changePwdModal = document.querySelector('.backdrop.change-pwd-modal')
-        accountDeleteModal = document.querySelector('.backdrop.account-delete-modal')
+        changePwdModal.current = document.querySelector('.backdrop.change-pwd-modal')
+        accountDeleteModal.current = document.querySelector('.backdrop.account-delete-modal')
     });
 
     async function openPwdModal (){
-        console.log(changePwdModal);
-        changePwdModal.style.display = "block"
+        console.log(changePwdModal.current);
+        changePwdModal.current.style.display = "block"
     }
     async function openAccDeleteModal (){
-        console.log(accountDeleteModal);
-        accountDeleteModal.style.display = "block"
+        console.log(accountDeleteModal.current);
+        accountDeleteModal.current.style.display = "block"
     }
     
     async function getSettings (){

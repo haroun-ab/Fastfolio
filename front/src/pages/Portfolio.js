@@ -223,7 +223,7 @@ function Portfolio () {
         } else {
             console.log("don't know");
         }
-
+   // eslint-disable-next-line react-hooks/exhaustive-deps
     },[loggedIn, localStorage.getItem('bgId'), isOnline])
     
     useEffect(() => {

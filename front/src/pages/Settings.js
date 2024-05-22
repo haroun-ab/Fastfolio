@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import Title from "../components/Title";
 import Button from "../components/Button";
 import '../styles/pages/settings.css'
@@ -10,8 +10,8 @@ import {setTheme, getBackground} from "../common";
 
 function Settings () {
     const [settings, setSettings] = useState(null);
-    let changePwdModal = 0;
-    let accountDeleteModal = 0;
+    let changePwdModal = useRef(null);
+    let accountDeleteModal = useRef(null);
     useEffect(() => {
         changePwdModal = document.querySelector('.backdrop.change-pwd-modal')
         accountDeleteModal = document.querySelector('.backdrop.account-delete-modal')
